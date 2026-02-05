@@ -29,8 +29,9 @@ jobs:
 
       - name: Build bottle
         run: |
-          brew install --build-bottle ./Formula/ec.rb
-          brew bottle --json --root-url "https://github.com/chojs23/homebrew-ec/releases/download/${GITHUB_REF_NAME}" ec
+          brew tap --force-auto-update chojs23/ec "${PWD}"
+          brew install --build-bottle chojs23/ec/ec
+          brew bottle --json --root-url "https://github.com/chojs23/homebrew-ec/releases/download/${GITHUB_REF_NAME}" chojs23/ec/ec
 
       - name: Ensure release exists
         env:
@@ -48,7 +49,7 @@ jobs:
 
       - name: Merge bottle metadata
         run: |
-          brew bottle --merge --write --root-url "https://github.com/chojs23/homebrew-ec/releases/download/${GITHUB_REF_NAME}" ec
+          brew bottle --merge --write --root-url "https://github.com/chojs23/homebrew-ec/releases/download/${GITHUB_REF_NAME}" chojs23/ec/ec
           git add Formula/ec.rb
 
       - name: Commit formula updates
