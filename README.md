@@ -1,16 +1,16 @@
-# Chojs23 Ec
+# ec
 
 ## How do I install these formulae?
 
-`brew install chojs23/ec/<formula>`
+`brew install chojs23/ec/ec`
 
-Or `brew tap chojs23/ec` and then `brew install <formula>`.
+Or `brew tap chojs23/ec` and then `brew install ec`.
 
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
 tap "chojs23/ec"
-brew "<formula>"
+brew "ec"
 ```
 
 ## Documentation
