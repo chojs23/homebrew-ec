@@ -29,7 +29,7 @@ jobs:
 
       - name: Build bottle
         run: |
-          brew tap --force-auto-update chojs23/ec "${PWD}"
+          HOMEBREW_NO_AUTO_UPDATE=1 brew tap chojs23/ec "${GITHUB_WORKSPACE}"
           brew install --build-bottle chojs23/ec/ec
           brew bottle --json --root-url "https://github.com/chojs23/homebrew-ec/releases/download/${GITHUB_REF_NAME}" chojs23/ec/ec
 
