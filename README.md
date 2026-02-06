@@ -2,15 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install chojs23/tap/ec`
-
-Or `brew tap chojs23/tap` and then `brew install ec`.
-
-Or, in a `brew bundle` `Brewfile`:
-
 ```ruby
 tap "chojs23/tap"
-brew "ec"
+brew install
 ```
 
 ## Documentation
