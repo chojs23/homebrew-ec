@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+env:
+  HOMEBREW_NO_SANDBOX_LINUX: 1
+
 jobs:
   test-bot:
     strategy:
