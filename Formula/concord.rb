@@ -1,25 +1,25 @@
 class Concord < Formula
   desc "A terminal user interface client for Discord"
   homepage "https://github.com/chojs23/concord"
-  version "2.1.5"
+  version "2.1.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.1.5/concord-aarch64-apple-darwin.tar.xz"
-      sha256 "8d2440b2e5d9afa16b7446591ae1d096342845895db2a42601e4d10d21f740b4"
+      url "https://github.com/chojs23/concord/releases/download/v2.1.6/concord-aarch64-apple-darwin.tar.xz"
+      sha256 "55b1bada44b473705bb7be892ac5947d535b805979f7dbd879fee65c0ac7ec09"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.1.5/concord-x86_64-apple-darwin.tar.xz"
-      sha256 "215870d7d20346b3a71d25a77c47527da1dbc7ecc51834e6c8a5aad665f10c52"
+      url "https://github.com/chojs23/concord/releases/download/v2.1.6/concord-x86_64-apple-darwin.tar.xz"
+      sha256 "61f32143b24690fbad3515fcc99c08e117e7df7198bc1213332d71715a1b6db9"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.1.5/concord-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d8c0ab3dd41254b7eefebbb46842a5adb0420d19559062cbed99307fef2163bf"
+      url "https://github.com/chojs23/concord/releases/download/v2.1.6/concord-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "31b9bbd89e84e8bbfedd1622c8721c7dd77fe9abfe1fef13e1b4ebe28b9bf457"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.1.5/concord-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "14c9a4e1bb01d5b0a0ecebf7589b42a5ba2c2e7d9bb07f41b244b9e648c694ec"
+      url "https://github.com/chojs23/concord/releases/download/v2.1.6/concord-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d00d4f99646e536318e7e8d5021eb182747b51e7063bd8f3835e50fb8a5e9ba0"
     end
   end
   license "GPL-3.0-only"
