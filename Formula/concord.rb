@@ -1,28 +1,31 @@
 class Concord < Formula
   desc "A terminal user interface client for Discord"
   homepage "https://github.com/chojs23/concord"
-  version "2.4.8"
+  version "2.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.4.8/concord-aarch64-apple-darwin.tar.xz"
-      sha256 "611317d2a12b72a06b80fef6d01e405cb6fbad6f1f18444afc7a9243f5dabd0b"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.0/concord-aarch64-apple-darwin.tar.xz"
+      sha256 "3fafc34476c6e60e620158182974549f7367cddd8a6ed01556afcf34dba79fc0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.4.8/concord-x86_64-apple-darwin.tar.xz"
-      sha256 "ccd6ff61ec9f367e07cb1eeb07b8ee76fc26d347590b8a83fdd89a8d95e40d40"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.0/concord-x86_64-apple-darwin.tar.xz"
+      sha256 "816b9bfff15468055a385f678d23d224496593915e5a42ed47fdddba665d8a1d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.4.8/concord-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "202ae07dd844cb7f59780a75924dbb09320e80fb562fab42784163f7d013a531"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.0/concord-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d2303541c37d1028e7f3345b49bdc0f17b97d4dce88cc66a935d293fa2c582e4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.4.8/concord-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9236818074fd7f4947f2c217e47bf181551d25c77c2fe8e01003c4ed1e1372f9"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.0/concord-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a83f07b7457bce61430a6c0aecfb575ec1913318da6dd9aeb1fb00e13238fe8a"
     end
   end
   license "GPL-3.0-only"
+  depends_on "alsa-lib"
+  depends_on "opus"
+  depends_on "pipewire"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
