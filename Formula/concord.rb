@@ -23,9 +23,12 @@ class Concord < Formula
     end
   end
   license "GPL-3.0-only"
-  depends_on "alsa-lib"
   depends_on "opus"
-  depends_on "pipewire"
+
+  on_linux do
+    depends_on "alsa-lib"
+    depends_on "pipewire"
+  end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
