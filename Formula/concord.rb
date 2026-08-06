@@ -1,32 +1,32 @@
 class Concord < Formula
   desc "A terminal user interface client for Discord"
   homepage "https://github.com/chojs23/concord"
-  version "2.5.3"
+  version "2.5.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.3/concord-aarch64-apple-darwin.tar.xz"
-      sha256 "cb61c05369f08735dcff431320c5bf6439032a7be10be85a827c91b5edc42aa4"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.4/concord-aarch64-apple-darwin.tar.xz"
+      sha256 "ce58435a4e77b1b0d0ce5e6e796b74c69903736c929b407e7f04cefc021bca51"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.3/concord-x86_64-apple-darwin.tar.xz"
-      sha256 "1b53b92957a59a711fdcf64768068af4b6e6a1c9b1ac42f158679b19c1f875b2"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.4/concord-x86_64-apple-darwin.tar.xz"
+      sha256 "1b3d105a3962ca631c817d7f7eba3109da15475234f65e429bb9d5fc0ea7c504"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.3/concord-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d69ee7291f1ae5ee13d0d3e685fe3576c1789e9e72f670cb227f2bf4e2dcb0df"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.4/concord-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9029bde8eee191673c103e925e4e649965030f25b5005c4e6996e61857360231"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.3/concord-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8981969261ddb3350019513a871dd43753e504084e42f33704774c090c3b89e3"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.4/concord-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2f3e78bf5ba6fb9da7a64098b06bfc0ad49c0327351fea2e7d4e97bc869c4522"
     end
   end
   license "GPL-3.0-only"
-  depends_on "opus"
-
   on_linux do
     depends_on "alsa-lib"
+    depends_on "libva"
+    depends_on "mesa"
     depends_on "pipewire"
   end
 
