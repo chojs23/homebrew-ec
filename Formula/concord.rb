@@ -1,25 +1,25 @@
 class Concord < Formula
   desc "A terminal user interface client for Discord"
   homepage "https://github.com/chojs23/concord"
-  version "2.5.6"
+  version "2.5.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.6/concord-aarch64-apple-darwin.tar.xz"
-      sha256 "934de5667295dda914d3e23007bb2721a90f7808007e29fe0473bb9914bb1d02"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.7/concord-aarch64-apple-darwin.tar.xz"
+      sha256 "e58b178b2cf370588488b3d37c3530c46a208c9eee3807f5905879c487753520"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.6/concord-x86_64-apple-darwin.tar.xz"
-      sha256 "1c9eff2bcea60092c16231be27a9f8dd85c1c38165e6f6ec3bc2fe1aa6d444d9"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.7/concord-x86_64-apple-darwin.tar.xz"
+      sha256 "157f140f2a0c3725c613199e8210f3c396b9730d275520bd44b54246deb907b0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.6/concord-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4885278cf4b26148380905e1e9aa50f88058084c8c85b8352ee68043ff43c1fc"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.7/concord-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1ed869d00b475d16a57b9005c8401d2ffff3f906af88959994ac6832c0a26524"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chojs23/concord/releases/download/v2.5.6/concord-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "43791c70fe9a4206e6162fd35a820cee85e21ec0fec881555dd9df3b00c7e9ef"
+      url "https://github.com/chojs23/concord/releases/download/v2.5.7/concord-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "77e594390e923691c6f41a1531b20ea2cb841c1d53abd37316e79e8fb8146a95"
     end
   end
   license "GPL-3.0-only"
@@ -54,10 +54,18 @@ class Concord < Formula
   end
 
   def install
-    bin.install "concord" if OS.mac? && Hardware::CPU.arm?
-    bin.install "concord" if OS.mac? && Hardware::CPU.intel?
-    bin.install "concord" if OS.linux? && Hardware::CPU.arm?
-    bin.install "concord" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "concord"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "concord"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "concord"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "concord"
+    end
 
     install_binary_aliases!
 
